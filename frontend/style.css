@@ -2,31 +2,197 @@
 
 /* CSS Reset */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Body styles. DO NOT REMOVE OR EDIT UNLESS ABSOLUTELY NECESSARY */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    padding: 0;
-    margin: 0;
-    color: #333;
-    padding-top: 30px;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  padding: 0;
+  margin: 0;
+  color: #000;
+  padding-top: 30px;
 }
 
 /* Disclaimer styles. DO NOT REMOVE OR EDIT UNLESS ABSOLUTELY NECESSARY */
 .disclaimer {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 0.5rem;
-    z-index: 1000;
-    font-weight: bold;
-    height: 30px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+  z-index: 1000;
+  font-weight: bold;
+  height: 30px;
 }
 
 /* ---- Your custom styles below ---- */
+
+/* Header */
+header {
+  text-align: center;
+  background-color: white;
+  padding: 15px 10px;
+  border-bottom: 2px solid #e21b3c;
+}
+
+header h1 {
+  font-size: 2.3rem;
+  color: #e21b3c;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Main Content */
+main {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Section */
+section {
+  background: linear-gradient(135deg, #ffffff, #f8f9fa);
+  border-radius: 10px;
+  padding: 30px;
+  margin: 20px auto;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e6f0ff;
+}
+
+section h2 {
+  font-size: 2rem;
+  color: #e21b3c;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Form */
+form {
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #e6f0ff;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group label {
+  font-weight: bold;
+  color: #e21b3c;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline-color: #e21b3c;
+}
+
+/* Buttons */
+button {
+  padding: 12px 20px;
+  background: #e21b3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #c2183b;
+  transform: translateY(-2px);
+}
+
+/* Medicine List */
+#medicine-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.card {
+  background: linear-gradient(145deg, #ffffff, #f4f4f4);
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #333;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #e21b3c;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.btn-primary {
+  padding: 10px 15px;
+  background: #e21b3c;
+  color: white;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  background: #c2183b;
+}
+
+.btn-danger {
+  background: #ff6b6b;
+  color: white;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.btn-danger:hover {
+  background: #e23c3c;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: white;
+  color: #666;
+  border-top: 1px solid #ddd;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+.update-card {
+  display: none;
+}
