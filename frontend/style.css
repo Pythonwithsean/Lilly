@@ -40,7 +40,6 @@ body {
   }
 }
 
-/* Header */
 header {
   text-align: center;
   background-color: #e21b3c;
@@ -57,14 +56,12 @@ header h1 {
   letter-spacing: 1.5px;
 }
 
-/* Main Content */
 main {
   padding: 20px;
   max-width: 1200px;
   margin: auto;
 }
 
-/* Section */
 section {
   background: linear-gradient(145deg, #ffffff, #f0f0f5);
   border-radius: 15px;
@@ -89,7 +86,6 @@ section h2 {
   text-transform: uppercase;
 }
 
-/* Form */
 form {
   padding: 20px;
   border-radius: 10px;
@@ -134,7 +130,6 @@ button:hover {
   transform: translateY(-3px);
 }
 
-/* Medicine List */
 #medicine-list {
   display: flex;
   flex-wrap: wrap;
@@ -206,21 +201,9 @@ button:hover {
   display: none;
 }
 
-/* Search Result */
 #search-result {
   margin-top: 20px;
   font-size: 1.2rem;
   font-weight: bold;
   text-align: center;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 15px;
-  background: #e21b3c;
-  color: #fff;
-  border-top: 5px solid #c2183b;
-  margin-top: 20px;
-  font-size: 0.9rem;
 }
