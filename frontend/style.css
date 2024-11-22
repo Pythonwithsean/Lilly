@@ -31,19 +31,30 @@ body {
 
 /* ---- Your custom styles below ---- */
 
+@keyframes slideDown {
+  from {
+    top: -50px;
+  }
+  to {
+    top: 0;
+  }
+}
+
 /* Header */
 header {
   text-align: center;
-  background-color: white;
-  padding: 15px 10px;
-  border-bottom: 2px solid #e21b3c;
+  background-color: #e21b3c;
+  padding: 20px 10px;
+  color: #fff;
+  border-bottom: 5px solid #c2183b;
+  border-radius: 0 0 15px 15px;
 }
 
 header h1 {
-  font-size: 2.3rem;
-  color: #e21b3c;
+  font-size: 2.5rem;
   font-weight: bold;
   text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
 
 /* Main Content */
@@ -55,12 +66,18 @@ main {
 
 /* Section */
 section {
-  background: linear-gradient(135deg, #ffffff, #f8f9fa);
-  border-radius: 10px;
+  background: linear-gradient(145deg, #ffffff, #f0f0f5);
+  border-radius: 15px;
   padding: 30px;
   margin: 20px auto;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-  border: 1px solid #e6f0ff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
 
 section h2 {
@@ -69,75 +86,74 @@ section h2 {
   margin-bottom: 20px;
   text-align: center;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 /* Form */
 form {
   padding: 20px;
   border-radius: 10px;
-  border: 1px solid #e6f0ff;
-  background: white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background: #fff;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .form-group label {
   font-weight: bold;
   color: #e21b3c;
+  margin-bottom: 5px;
 }
 
 .form-group input {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 1rem;
   outline-color: #e21b3c;
 }
 
-/* Buttons */
 button {
   padding: 12px 20px;
   background: #e21b3c;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 button:hover {
   background: #c2183b;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
 }
 
 /* Medicine List */
 #medicine-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 20px;
   justify-content: center;
 }
 
 .card {
-  background: linear-gradient(145deg, #ffffff, #f4f4f4);
+  background: #fff;
   border: 1px solid #ddd;
   border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  width: 280px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  color: #333;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
 .card-body {
@@ -145,7 +161,7 @@ button:hover {
 }
 
 .card-title {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: bold;
   color: #e21b3c;
   margin-bottom: 10px;
@@ -157,13 +173,20 @@ button:hover {
   margin-bottom: 15px;
 }
 
-.btn-primary {
+.btn-primary,
+.btn-danger {
   padding: 10px 15px;
-  background: #e21b3c;
-  color: white;
   border-radius: 8px;
-  text-transform: uppercase;
   font-weight: bold;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary {
+  background: #e21b3c;
+  color: #fff;
 }
 
 .btn-primary:hover {
@@ -173,26 +196,31 @@ button:hover {
 .btn-danger {
   background: #ff6b6b;
   color: white;
-  border-radius: 8px;
-  text-transform: uppercase;
-  font-weight: bold;
 }
 
 .btn-danger:hover {
   background: #e23c3c;
 }
 
+.update-card {
+  display: none;
+}
+
+/* Search Result */
+#search-result {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
 /* Footer */
 footer {
   text-align: center;
   padding: 15px;
-  background: white;
-  color: #666;
-  border-top: 1px solid #ddd;
+  background: #e21b3c;
+  color: #fff;
+  border-top: 5px solid #c2183b;
   margin-top: 20px;
   font-size: 0.9rem;
-}
-
-.update-card {
-  display: none;
 }
