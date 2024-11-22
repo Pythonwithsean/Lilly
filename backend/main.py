@@ -134,10 +134,12 @@ def average():
     """
     with open('data.json', "r") as meds:
         data = json.load(meds)
-    prices = [med['price'] if med['price'] != None else 0  for med in data["medicines"]]
+    # Calculate average of medicines 
+    # I only add the medicines that have not been corrupted
+    prices = [med['price'] for med in data["medicines"] if med['price'] is not None and med['name'] != '']
     average_price = sum(prices) / len(prices)
-    print(average_price)
-    return {"average_price": average_price}
+    print(average_price.__round__(2))
+    return {"average_price": average_price.__round__(2)}
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
